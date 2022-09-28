@@ -1,0 +1,11 @@
+valor_1 = float(input())
+valor_2 = float(input())
+valor_3 = float(input())
+media = (valor_3 + valor_1 +valor_2) / 3
+print(f'{media :.2f}')
+mediap = (2*valor_1)+ (2*valor_2)+(3*valor_3)
+mediap1 = mediap / 7
+print(f'{mediap1 :.2f}')
+media_ponderada = (1*valor_1)+ (2*valor_2)+(2*valor_3)
+media_ponderada1 = media_ponderada / 5
+print(f'{media_ponderada1 :.2f}')
