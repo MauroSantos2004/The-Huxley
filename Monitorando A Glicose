@@ -1,0 +1,14 @@
+valor = 0
+vezes_de_entrada = 0
+glicose = 1
+while glicose != 0:
+    glicose = int(input())
+    valor += glicose
+    vezes_de_entrada += 1
+m = valor/ (vezes_de_entrada -1)
+if m < 110:
+    print('Glicose Normal')
+elif 110 < m < 200:
+    print('Glicose Alterada')
+else:
+    print('Glicose Muito Alta')
