@@ -1,0 +1,19 @@
+esquerda = 0
+direita = 0
+invalidas = 0
+E = 'E' 'Esq' 'Esquerda'
+D = 'D' 'Dir' 'Direita'
+p = '*'
+while True:
+    direcao = str(input()).title().strip()
+    if direcao in E:
+        esquerda += 1
+    elif direcao in D:
+        direita += 1
+    else:
+        invalidas += 1
+    if direcao == p :
+        print(f'Esquerda: {esquerda}')
+        print(f'Direita: {direita}')
+        print(f'Incorretas: {invalidas - 1} ')
+        break
