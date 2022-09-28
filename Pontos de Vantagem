@@ -1,0 +1,15 @@
+numero_escolhido = int(input())
+dunga = 0
+nando = 0
+
+for x in str(numero_escolhido):
+    if int(x) % 2 == 0:
+       dunga += int(x)
+    else:
+        nando += int(x)
+if dunga > nando:
+    print(f'Vencedor: Dunga\n{dunga - nando} Pontos de Vantagem')
+elif nando > dunga:
+    print(f'Vencedor: Nando\n{nando - dunga} Pontos de Vantagem')
+else:
+    print('Empate')
