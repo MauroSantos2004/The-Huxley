@@ -1,0 +1,21 @@
+result = 0
+contar = 0
+total_conta = 0
+entradas = 0
+while True:
+    word = input().upper()
+    if word == 'FIM' and entradas == 0:
+        print('texto vazio')
+        break
+    if word == 'FIM':
+        break
+    entradas += 1
+    word = word.split()
+    total_conta += len(word)
+    for x, letters in enumerate(word):
+        for y in letters:
+            if (y =='A') or (y == 'E') or (y == 'I') or (y == 'O') or (y == 'U'):
+                contar += 1
+if entradas != 0:
+    result = contar / total_conta
+    print(f'{result:.2f}')
