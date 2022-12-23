@@ -1,0 +1,10 @@
+gas = int(input())
+
+if gas <= 10:
+    print(5)
+elif gas <= 50:
+    print(5 + (gas -10))
+elif gas <= 80:
+    print(((gas-50)*2) +45)
+elif gas > 80:
+    print(((gas - 80)*3) + 105)
