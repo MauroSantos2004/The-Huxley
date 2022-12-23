@@ -1,0 +1,17 @@
+onibus = input()
+entrada = [int(x) for x in str(onibus)]
+entrada.reverse()
+direcao = []
+def converter():
+    for x, i in enumerate(entrada):
+        direcao.append(i * (2**x))
+    a = 1
+    b = 0
+    while a < sum(direcao):
+        b += 1
+        a = a * 4
+    print(b)
+if entrada[-1] == 0:
+    print("Numero Invalido")
+else:
+    converter()
