@@ -1,0 +1,12 @@
+livros = int(input())
+alunos = int(input())
+
+res = alunos / livros
+if res <= 8:
+    print('A')
+elif res >= 9 and res <= 12:
+    print('B')
+elif res >= 13 and res <= 18:
+    print('C')
+elif res > 18:
+    print('D')
