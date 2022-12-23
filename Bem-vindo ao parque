@@ -1,0 +1,5 @@
+nome = input()
+atracao = input()
+
+recepcao = f'Bem-vindo {nome}! Aguardamos voc� na/o {atracao}!'
+print(recepcao)
