@@ -1,0 +1,17 @@
+entrada = [(int(i) for i in input().split()) for i in range(37)]
+entrada = dict(entrada)
+pedidos = []
+while True:
+  a = input()
+  if a == '9999':
+    break
+  a = [int(i) for i in a.split()]
+  pedidos.append(a)
+pedidos = dict(pedidos)
+for i in pedidos:
+  # i = identidade \\ pedidos[i] = voo
+  if pedidos[i] in entrada and entrada[pedidos[i]] > 0:
+    print(i)
+    entrada.update({pedidos[i]: entrada[pedidos[i]] - 1})
+  else:
+    print('INDISPONIVEL')
