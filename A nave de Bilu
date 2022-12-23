@@ -1,0 +1,10 @@
+entrada1 = [float(i) for i in input().split()]
+entrada2 = [float(i) for i in input().split()]
+
+cal1 = entrada1[0] * entrada1[1]
+cal2 = entrada2[0] * entrada2[1]
+
+if cal1 < cal2:
+    print('Pousa, bilu')
+else:
+    print('Procura outro lugar, bilu')
