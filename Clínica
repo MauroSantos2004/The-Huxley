@@ -1,0 +1,25 @@
+conta_criada = []
+
+while True:
+
+    print('Digite a opcao desejada:\n1- Cadastrar m�dico.\n2- Cadastrar consulta.\n3- Pesquisar consulta.\n0- Sair do programa.')
+    entrada = int(input())
+    if entrada == 1:
+        codigo = int(input('Digite codigo do medico:\n'))
+        nome = input('Digite o nome do medico:\n')
+        conta_criada.append({'Codigo': codigo, 'Medico': nome})
+        print(f'Codigo: {codigo} | Medico: {nome}')
+    elif entrada == 2:
+        consulta = int(input('Digite o codigo da consulta:\n'))
+        dia = input('Digite o dia da semana:\n')
+        horario = int(input('Digite a hora:\n'))
+        seu_medico = int(input('Digite o codigo do medico:\n'))
+        conta_criada.append({'Codigo': consulta, 'Semana': dia, 'Hora': horario, 'Cod. Medico': seu_medico})
+        print(f'Codigo: {consulta} | Semana: {dia} | Hora: {horario} | Cod. Medico: {seu_medico}')
+    elif entrada == 3:
+        codigo_da_consulta = int(input('Digite o codigo da consulta:\n'))
+        for i in conta_criada:
+            if i['Codigo'] == codigo_da_consulta:
+                print('Codigo: {} | Semana: {} | Hora: {} | Cod. Medico: {}'.format(i['Codigo'], i['Semana'], i['Hora'], i['Cod. Medico']))
+    if entrada == 0:
+        break
