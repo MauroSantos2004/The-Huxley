@@ -1,0 +1,7 @@
+exame = float(input())
+if exame > 170.0:
+    print('Colesterol total {} mg/dl (ALTO)'.format(exame))
+elif exame < 150.0:
+    print('Colesterol total {} mg/dl (DESEJAVEL)'.format(exame))
+else:
+    print('Colesterol total {} mg/dl (LIMITROFE)'.format(exame))
