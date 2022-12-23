@@ -1,0 +1,12 @@
+for i in range(int(input())):
+    x = [float(i) for i in input().split()]
+    x = x[0] * x[1]
+    y = int(x)
+    m = 0
+    for i in range(2, y):
+        if y % i == 0:
+            m += 1
+    if m == 0:
+        print(f'{x - (x * 0.42):.2f}')
+    else:
+        print(f'{x:.2f}')
