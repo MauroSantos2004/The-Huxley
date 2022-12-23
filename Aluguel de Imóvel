@@ -1,0 +1,15 @@
+tipo = str(input().upper())
+# Vai receber o tipo do hotel STANDARD OU PREMIUM
+aluguel_por_dia = float(input())
+# Recebe a di�ria do aluguel
+dias_tv = float(input())
+# Dias da Tv
+dias_internet = float((input()))
+# Dais da internet
+
+if tipo == 'STANDARD':
+    valor = (aluguel_por_dia * 150) + (dias_tv * 10) + (dias_internet * 15)
+    print(('{:.2f}').format(valor))
+elif tipo == 'PREMIUM':
+    valor = (aluguel_por_dia * 200) + (dias_tv * 10) + (dias_internet * 15)
+    print(('{:.2f}').format(valor))
