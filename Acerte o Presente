@@ -1,0 +1,37 @@
+entrada = int(input())  # Quantidade de participantes
+
+testes = [[i for i in input().split()] for i in range(entrada)] # Testes
+'''
+A vari�vel testes ser� um contudor de dados para transformar em lista os dados 
+inseridos. O for i in range(entrada) ser� quantas vezes ir� se repetir o loop de entrada, colocando
+os dados dentro do testes.
+'''
+
+dicionario = dict()
+
+for z in testes:
+    dicionario.update({z[0]: (z[1], z[2], z[3])})
+'''Pega cada elemento da vari�vel (testes), colocando a string zero (Como a entrada t� dentro da lista,
+a string 0 ser� o primeiro elemento do testes)
+como chave e o restante como valores.
+
+Em Resumo essa parte receber� o nome que ser� organizado no for z in testes:
+    dicionario.update({z[0]: (z[1], z[2], z[3])}) para que o primeiro item da entrada, 
+    no caso o �ndice 0, seja a chave para o restante dos valores.
+'''
+
+while True:
+    entradas = input()
+    if entradas == 'FIM':
+        break
+    '''
+     Esse Lopp foi criado no intuito de parar as entradas de dados.
+            '''
+    tentativa = entradas.split() # dicionario
+    a = dicionario[tentativa[0]]
+    for i in a:
+        if i == tentativa[1]:
+            print('Uhul! Seu amigo secreto vai adorar')
+            break
+    else:
+        print('Tente Novamente!')
