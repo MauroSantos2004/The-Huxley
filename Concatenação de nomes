@@ -1,1 +1,5 @@
-print(input() input())
+nome = str(input())
+sobrenome = str(input())
+espa�o = ' '
+juncao = nome + espa�o + sobrenome
+print(juncao)
