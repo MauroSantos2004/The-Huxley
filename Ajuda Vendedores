@@ -1,0 +1,11 @@
+entrada = int(input())
+
+avista = entrada - 10/100 * entrada
+dividido = entrada/3
+comissao1 = 0.045 * entrada
+comissao2 = 0.05 * entrada
+
+print(f"A vista com desconto de 10%: {avista:.2f}")
+print(f"Valor da parcela em 3x sem juros: {dividido:.2f}")
+print(f"Comissao do vendedor a vista: {comissao1:.2f}")
+print(f"Comissao do vendedor a prazo: {comissao2:.2f}")
