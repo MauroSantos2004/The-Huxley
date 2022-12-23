@@ -1,0 +1,3 @@
+frase = str(input())
+invert = frase[::-1]
+print(invert)
