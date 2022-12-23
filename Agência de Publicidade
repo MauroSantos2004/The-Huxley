@@ -1,0 +1,30 @@
+acumulador = 0
+pare = 0
+
+while True:
+    entrada = input().strip()
+    if entrada == 'R�dio':
+        tipo = input()
+        if tipo == 'FM':
+            acumulador += 500
+            pare +=1
+        if tipo == 'AM':
+            acumulador += 300
+            pare += 1
+    if entrada == 'TV':
+        horario = int(input())
+        if horario >= 20:
+            acumulador += 1200
+            pare +=1
+        if horario > 20:
+            acumulador += 2000
+            pare +=1
+    if entrada == 'Revista':
+        acumulador += 750
+        pare += 1
+    if entrada == 'Outdoor':
+        acumulador += 1500
+        pare += 1
+    if pare == 7:
+        break
+print(f'{acumulador:.2f}')
