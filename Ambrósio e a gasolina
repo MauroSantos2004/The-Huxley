@@ -1,0 +1,24 @@
+viagem = [int(x) for x in input().split()]
+D, R , L, P, G = viagem[0],viagem[1],viagem[2],viagem[3],viagem[4]
+#KMT = Kilometro por litro
+#E = econimia
+#DP = dist?ncia do posto
+#QR = qUILMETRO RESTANTE
+#F = Falta
+#v = Valor Gasto
+KMT = L * 10
+E = 10
+DP = D/(P+1)
+
+if KMT >= D:
+    print(f'Pode viajar.\nR$:{R}')
+elif KMT <= D and DP <= KMT:
+    QR = D - KMT
+    F = QR / E
+    V = F * G
+    if V <= R:
+        print(f'Pode viajar.\nR$: {int(R - V)} ')
+    else:
+        print('Nao pode viajar.')
+else:
+    print('Nao pode viajar.')
