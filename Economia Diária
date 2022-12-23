@@ -1,0 +1,20 @@
+entrada = []
+dia = 0
+for i in range(7):
+   valor = float(input())
+   entrada.append(valor)
+seg, ter, qua, qui, sex, sab, dom = entrada[0], entrada[1], entrada[2], entrada[3], entrada[4], entrada[5], entrada[6]
+if ter >= seg + 0.5:
+   dia += 1
+if qua >= ter + 0.5:
+   dia += 1
+if qui >= qua + 0.5:
+   dia += 1
+if sex >= qui + 0.5:
+   dia += 1
+if sab >= sex + 0.5:
+   dia += 1
+if dom >= sab + 0.5:
+   dia += 1
+print(f"R$ {seg + ter + qua + qui + sex + sab + dom:.2f}")
+print(dia)
