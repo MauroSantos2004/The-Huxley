@@ -1,0 +1,8 @@
+palindromo = str(input()).strip().upper()
+x = palindromo.split()
+palindromo = ''.join(x)
+b = (palindromo[::-1])
+if palindromo == b:
+    print('SIM')
+else:
+    print('NAO')
