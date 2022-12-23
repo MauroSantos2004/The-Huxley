@@ -1,0 +1,31 @@
+texto = []
+dic = {}
+
+while True:
+    entrada = input().split()
+    erros = '. " ( * $ # : -1'
+
+    if entrada == ['-1']:
+        break
+    texto.append(entrada)
+
+def remover_especiais(palavra: str): # Processo de remo��o de caracteres especiais
+    palavranova = palavra
+    erros = [ '.',  '"',  '(', '*', '$', '#', ':']
+    for i in palavranova: # Vai verificar cada palavra inserida
+        for x in erros:
+            if i == x:
+                palavranova = palavranova.replace(x, '')
+    return palavranova.lower()
+
+for cada_palavra in texto:
+    for x in cada_palavra:
+        if dic.get(remover_especiais(x)) != None:
+            nova_dic = dic.get(remover_especiais(x)) + 1 # Verificando quantas palavras iguais tem
+            dic.update({remover_especiais(x): nova_dic}) 
+        else:
+            dic.update({remover_especiais(x): 1})
+contagem = sorted(dic)
+
+for i in contagem:
+    print(f'{i} - {dic[i]}')
