@@ -1,0 +1,20 @@
+entrada = input().lower()
+entrada1 = input().lower()
+
+valor = 0
+
+# Lanche
+if entrada == "lasanha":
+    valor += 8
+elif entrada == "estrogonofe":
+    valor += 11
+
+# Bebida
+
+if entrada1 == "refrigerante":
+    valor += 3
+
+elif entrada1 == "suco":
+    valor += 2.5
+
+print(f"{valor:.2f}")
