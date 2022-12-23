@@ -1,0 +1,15 @@
+frase = str(input()).lower()
+calculo_a = frase.count('a')
+calculo_e = frase.count('e')
+calculo_i = frase.count('i')
+calculo_o = frase.count('o')
+calculo_u = frase.count('u')
+print(f'a {calculo_a}')
+print(f'e {calculo_e}')
+print(f'i {calculo_i}')
+print(f'o {calculo_o}')
+print(f'u {calculo_u}')
+soma = calculo_a + calculo_e + calculo_i + calculo_o + calculo_u
+a = len(frase)
+porc = 100 * soma/ a
+print(f'{porc:.2f}%')
