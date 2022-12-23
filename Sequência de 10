@@ -1,0 +1,4 @@
+seq = [int(a) for a in input().split()]
+x = seq[9]
+contar = seq.count(x)
+print(f'O numero {x} apareceu {contar} vezes')
