@@ -1,0 +1,7 @@
+texto1 = input().upper()
+texto2 = input().upper()
+
+if texto1 == texto2:
+    print('IGUAIS')
+else:
+    print('DIFERENTES')
