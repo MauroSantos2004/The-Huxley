@@ -1,0 +1,12 @@
+altura1 = float(input())
+altura2 = float(input())
+altura3 = float(input())
+altura4 = float(input())
+foto = [ altura1, altura2,altura3,altura4]
+foto.sort()
+for x in range(len(foto)):
+    detalhe = foto
+print(f'{detalhe[0]:.2f}')
+print(f'{detalhe[2]:.2f}')
+print(f'{detalhe[3]:.2f}')
+print(f'{detalhe[1]:.2f}')
