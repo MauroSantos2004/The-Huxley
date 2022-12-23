@@ -1,0 +1,8 @@
+seu_salario = float(input())
+outros_emprestimos = float(input())
+
+credito = (seu_salario *30/100) - outros_emprestimos
+if  credito <  0:
+    print('0.00')
+else:
+    print('{:.2f}'.format(credito))
