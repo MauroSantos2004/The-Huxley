@@ -1,0 +1,18 @@
+adv = [[int(i) for i in input().split()] for i in range(3)]
+
+juntos = [i for i in adv [0]]
+
+inimigos = [x + y for x,y in zip([i for i in adv[1]], [i for i in adv[2]])]
+
+m_a, m_i = 0,0
+for x,y in zip (juntos, inimigos):
+    if x > y:
+        m_a += 1
+    elif x < y:
+        m_i +=1
+if m_a > len(juntos) / 2:
+    print("Avancar")
+elif m_i > len(inimigos) / 2:
+    print('Recuar')
+else:
+    print('Permanecer')
