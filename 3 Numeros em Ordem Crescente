@@ -1,0 +1,21 @@
+valor1 = int(input())
+valor2 = int(input())
+valor3 = int(input())
+x = 0
+
+if valor1 > valor2:
+    x = valor1
+    valor1 = valor2
+    valor2= x
+
+if valor1 > valor3:
+    x = valor1
+    valor1 = valor3
+    valor3 = x
+
+if valor2 > valor3:
+    x = valor2
+    valor2 = valor3
+    valor3 = x
+
+print(f"{valor1}\n{valor2}\n{valor3}")
