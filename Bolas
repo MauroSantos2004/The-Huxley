@@ -1,0 +1,9 @@
+bolas = [int(i) for i in input().split()]
+contar = 0
+for x in bolas:
+    if bolas.count(x) > len(bolas)/2:
+        contar += 1
+if contar < 1:
+    print('S')
+elif contar >=1:
+    print('N')
