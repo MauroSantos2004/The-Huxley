@@ -1,0 +1,15 @@
+pi = int(input())
+# Popula��o inicial
+ai = int(input())
+# Ano inicial
+q = int(input())
+# Percentual de crescimento populacional da cidade
+af = int(input())
+# Ano at� o qual pretende-se calcular o n�mero de habitantes
+porcentagem = (q/100) + 1
+intervalo = af - ai
+popula�ao = pi
+
+for x in range(intervalo + 1 ):
+    print(ai + x, int(popula�ao))
+    popula�ao = popula�ao * porcentagem
