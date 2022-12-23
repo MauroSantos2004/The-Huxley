@@ -1,0 +1,34 @@
+entrada = int(input())
+data = {}
+
+for _ in range(entrada):
+    mes,valor = input().split()
+    data[mes] = float(valor.replace(",","."))
+
+while True:
+    mensagem = input()
+    if mensagem == "*":
+        break
+    if mensagem[0] == "M":
+        mes,ano = mensagem.split()[1].split("/")
+        data_formatada = f"{ano}-" + (str(mes) if int(mes) >= 10 else f"0{mes}")
+        if data_formatada in data.keys():
+            print(f"{data[data_formatada]:.2f}")
+        else: print("Dados indisponiveis para este periodo")
+    else:
+        mes,ano = [ int(i) for i in mensagem.split()[1].split("/")]
+        repetir = int(mensagem.split()[2])
+        total = 0
+        pode_passar = True
+        for _ in range(repetir):
+            data_formatada = f"{ano}-" + (str(mes) if mes >= 10 else f"0{mes}")
+            if data_formatada not in data.keys():
+                pode_passar = False
+                print("Dados indisponiveis para este periodo")
+                break
+            total += data[data_formatada]
+            mes += 1
+            if mes > 12:
+                mes = 1
+                ano += 1
+        if pode_passar: print(f"{total:.2f}")
