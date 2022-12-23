@@ -1,0 +1,12 @@
+entrada1 = input().lower()
+compras = float(input())
+limite = float(input())
+
+if entrada1 == 'infinity':
+    print(f'{compras * 0.05:.2f}')
+elif entrada1 == 'platinum':
+    cb = compras * 0.025
+    print(f'{cb if cb < limite else limite:.2f}')
+elif entrada1 == 'gold':
+    cb = compras * 0.01
+    print(f'{cb if cb < limite else limite:.2f}')
