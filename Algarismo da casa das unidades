@@ -1,0 +1,7 @@
+def unidade(entrada):
+    if entrada < 0:
+        return entrada % -10
+
+    return entrada % 10
+
+print(unidade(entrada=int(input())))
